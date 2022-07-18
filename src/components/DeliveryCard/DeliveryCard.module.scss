@@ -1,0 +1,84 @@
+.wrapper {
+ 
+  // padding: 20px 0;
+}
+
+.card {
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #aec3da;
+  transition: all 0.3s;
+  position: relative;
+
+  &:hover {
+    box-shadow: 1px 1px 9px #514f4f;
+  }
+}
+
+.route {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+
+  & p {
+font-size: 18px;
+  }
+
+  & span {
+    font-size: 20px;
+    font-weight: bold;
+    // color: white;
+  }
+}
+
+.deleteBtn {
+  margin-left: 20px;
+}
+
+.helperButtons {
+  position: absolute;
+  bottom: 14px;
+  right: 40px;
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name {
+  font-size: 18px;
+}
+
+.text {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.info {
+  margin-bottom: 5px;
+}
+
+@media (max-width: 730px) {
+  .card {
+    max-width: 320px;
+  }
+
+  .route {
+    flex-direction: column;
+    text-align: center;
+
+    & p:first-of-type {
+      margin-bottom: 5px;
+    }
+  }
+
+  .helperButtons {
+    flex-direction: column;
+    right: 12px;
+    width: auto;
+    height: 120px;
+    bottom: 7px;
+  }
+}

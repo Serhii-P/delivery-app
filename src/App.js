@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import RequestBlock from './components/RequestBlock/RequestBlock';
+import DeliveryList from './components/DeliveryList/DeliveryList';
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/pages/Home';
+import EditRequest from './components/pages/EditRequest';
+import './App.scss';
 
-function App() {
+
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 className='app-name'>Delivery application</h1>
+       <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/edit-request/:id" element={<EditRequest />} />
+      </Routes>
+      {/* <RequestBlock /> */}
+      {/* <DeliveryList /> */}
     </div>
   );
 }
